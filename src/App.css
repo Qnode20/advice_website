@@ -1,4 +1,6 @@
-#root, html, body {
+#root,
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -7,7 +9,11 @@
 
 .app {
   height: 100%;
-  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./images/city.jpg');
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.151),
+      rgba(0, 0, 0, 0.747)
+    ),
+    url('./images/city.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -17,12 +23,16 @@
 }
 
 .card {
-  background: whitesmoke;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.151),
+    rgba(0, 0, 0, 0.747)
+  );
   width: 40%;
   height: 20%;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
   border-radius: 25px;
   padding: 2%;
   box-shadow: 10px 10px;
@@ -31,42 +41,45 @@
 .heading {
   display: flex;
   align-items: center;
-  height: 582px;
+  color: #fff;
+  margin: 20px;
+  width: 80%;
+  height: 80%;
 }
 
 .button {
   position: relative;
   outline: none;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
-  height: 200px;
-  width: 210px;
+  height: 50%;
+  width: 50%;
   opacity: 1;
   background-color: #ffffff;
   border: 1px solid rgba(22, 76, 167, 0.6);
 }
-  
+
 .button span {
   color: #164ca7;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.7px;
 }
-  
+
 .button:hover {
   animation: rotate 0.7s ease-in-out both;
 }
-  
+
 .button:hover span {
   animation: storm 0.7s ease-in-out both;
   animation-delay: 0.06s;
 }
-  
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
@@ -84,7 +97,7 @@
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
 }
-  
+
 @keyframes storm {
   0% {
     transform: translate3d(0, 0, 0) translateZ(0);
@@ -101,11 +114,11 @@
   100% {
     transform: translate3d(0, 0, 0) translateZ(0);
   }
-}  
+}
 
 @media only screen and (max-width: 600px) {
   .card {
-      width: 80%;
-      height: 30%;
+    width: 80%;
+    height: 30%;
   }
 }
