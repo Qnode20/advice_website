@@ -29,7 +29,7 @@ export default function App() {
           {advice.advice}
         </h3>
         <button className="button" onClick={fetchAdvice}>
-          <span>GIVE ME ADVICE!</span>
+          <span>ADVICE!</span>
         </button>
       </div>
     </div>

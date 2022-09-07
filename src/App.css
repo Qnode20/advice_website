@@ -9,10 +9,7 @@ body {
 
 .app {
   height: 100%;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.151),
-      rgba(0, 0, 0, 0.747)
-    ),
+  background: linear-gradient(rgba(56, 52, 52, 0.151), rgba(0, 0, 0, 0.747)),
     url('./images/city.jpg');
   background-size: cover;
   background-position: center;
@@ -23,19 +20,17 @@ body {
 }
 
 .card {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.151),
-    rgba(0, 0, 0, 0.747)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.151), rgba(61, 60, 60, 0.747));
   width: 40%;
   height: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  border-radius: 25px;
+  border-radius: 30px;
+  border: 0.1px solid #ffffff;
   padding: 2%;
-  box-shadow: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
 .heading {
@@ -51,21 +46,21 @@ body {
   position: relative;
   outline: none;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
-  height: 50%;
-  width: 50%;
+  height: 20%;
+  width: 20%;
   opacity: 1;
-  background-color: #ffffff;
-  border: 1px solid rgba(22, 76, 167, 0.6);
+  background-color: #ffffff33;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .button span {
-  color: #164ca7;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.7px;
@@ -119,6 +114,6 @@ body {
 @media only screen and (max-width: 600px) {
   .card {
     width: 80%;
-    height: 30%;
+    height: 80%;
   }
 }
