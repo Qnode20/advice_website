@@ -5,13 +5,16 @@ import moment from 'moment';
 
 export default function App() {
   const [advice, setAdvice] = useState('');
-  const formatDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+  const [formatDate, setFormatDate] = useState(
+    moment().format('MMMM Do YYYY, h:mm:ss a')
+  );
 
   const fetchAdvice = () => {
     axios
-      .get('https://api.adviceslip.com/advice')
+      .get(`https://api.adviceslip.com/advice?timestamp=${Date.now()}`)
       .then((response) => {
         setAdvice(response.data.slip);
+        setFormatDate(moment().format('MMMM Do YYYY, h:mm:ss a'));
       })
       .catch((error) => {
         console.log(error);
